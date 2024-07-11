@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+main {
+  background: #191816;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header image" "form image";
+  height: 100vh;
+}
+main header {
+  grid-area: header;
+  margin: 1rem;
+}
+main .section {
+  grid-area: form;
+  display: flex;
+  justify-content: center;
+}
+main .section .form {
+  width: 70%;
+  height: 75%;
+  background-color: #24221f;
+  position: relative;
+  top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .section .form .log {
+  display: flex;
+  padding: 0.2rem 0;
+}
+main .section .form .log h2 {
+  padding: 0.3rem;
+  color: #d4ccb6;
+  font-family: "Roboto", "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+}
+main .section .form .instructions p {
+  color: #afb6c2;
+  font-family: "Roboto", "sans-serif";
+  font-weight: 400;
+  font-size: 0.5rem;
+  letter-spacing: 0rem;
+}
+main .section .form form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+main .section .form form label {
+  font-family: "Poppins", "sans-serif";
+  color: #afb6c2;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+}
+main .section .form form input {
+  background-color: #24221f;
+  border: 1px solid #afb6c2;
+  border-radius: 0.2rem;
+  width: 15rem;
+  padding: 5px 1rem 5px 1.8rem;
+  color: #afb6c2;
+}
+main .section .form form input[placeholder] {
+  color: #afb6c2;
+  font-family: "Poppins", "sans-serif";
+  font-size: 0.6rem;
+}
+main .section .form form .email-box {
+  position: relative;
+}
+main .section .form form .email-box .email-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem;
+  width: 1rem;
+  height: auto;
+}
+main .section .form form .email-box #email:focus {
+  border: 0.2rem solid #ffc632;
+  outline: none;
+  caret-color: transparent;
+  /*}
+  & #email-focus {
+    display: none;
+  }
+  & input:focus + #email-pre + #email-focus {
+    display: block;
+  } */
+}
+main .section .form form .password-box {
+  position: relative;
+  /* & #lock-focus {
+    display: none;
+  }
+  & input:focus + #lock-pre {
+    display: none;
+  }
+  & input:focus + #lock-pre + #lock-focus {
+    display: block;
+  } */
+}
+main .section .form form .password-box .lock-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem;
+  width: 1rem;
+  height: auto;
+}
+main .section .form form .password-box #password:focus {
+  border: 0.2rem solid #ffc632;
+  outline: none;
+  caret-color: transparent;
+}
+main .section .form form .password-box #eyes_icons_container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+  width: 1rem;
+  height: auto;
+}
+main .section .form form .password-box #eyes_icons_container #eyeOpened {
+  display: none;
+}
+main .section .form form .icon-focus {
+  display: none;
+}
+main .section .form form input:focus + .icon-pre {
+  display: none;
+}
+main .section .form form input:focus + .icon-pre + .icon-focus {
+  display: block;
+}
+main .section .form form .remind {
+  display: flex;
+  margin: 0.4rem 0;
+}
+main .section .form form .remind #remind {
+  accent-color: #ffc632;
+  height: 1.2rem;
+  width: 1.2rem;
+  padding: 0;
+  border: 1px solid #afb6c2;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+main .section .form form .remind #remind::after {
+  content: url(images/check.svg);
+  display: none;
+}
+main .section .form form .remind #remind:checked {
+  background-color: #ffc632;
+}
+main .section .form form .remind #remind:checked::after {
+  display: block;
+}
+main .section .form form .remind label {
+  font-size: 0.5rem;
+  font-family: "Poppins", "sans-serif";
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+}
+main .section .form form .remind p {
+  font-family: "Poppins", "sans-serif";
+  font-size: 0.6rem;
+  color: #ffc632;
+  position: relative;
+  left: 4.5rem;
+  padding-top: 0.2rem;
+}
+main .section .form .btn .loginbtn {
+  background-color: #ffc632;
+  border-radius: 3%;
+  border: 0;
+  font-family: "Poppins", "sans-serif";
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+  padding: 0.4rem 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+main .section .form .btn .login {
+  width: 400%;
+  display: inline-block;
+}
+main .section .form .text p {
+  color: #ffc632;
+  padding-left: 3rem;
+  padding-top: 0.2rem;
+  font-family: "Poppins", "sans-serif";
+  font-size: 0.6rem;
+}
+main .image {
+  grid-area: image;
+}
+main .image img {
+  object-fit: scale-down;
+  height: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  main #form {
+    display: block;
+    margin: 0;
+  }
+  ~ main #form #Form {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  main #image {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

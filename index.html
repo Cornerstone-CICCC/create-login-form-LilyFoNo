@@ -4,8 +4,112 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Log-in Form</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <header>
+        <img src="images/logo.svg" alt="" />
+      </header>
+      <section class="section" id="form">
+        <div class="form" id="Form">
+          <div class="form-box">
+            <div class="log">
+              <img src="images/log-in.svg" alt="" class="log-in" />
+              <h2>Login</h2>
+            </div>
+            <div class="instructions">
+              <p>Insert your information below.</p>
+            </div>
+            <form action="">
+              <label for="email">E-mail</label>
+              <div class="email-box">
+                <input
+                  type="email"
+                  name="Email"
+                  id="email"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  placeholder="Type your email"
+                  autocomplete="on"
+                />
+                <img
+                  src="images/mail.svg"
+                  alt=""
+                  class="email-icon icon-pre"
+                  id="email-pre"
+                />
+                <img
+                  src="images/mail-focus.svg"
+                  alt=""
+                  class="email-icon icon-focus"
+                  id="email-focus"
+                />
+              </div>
+              <label for="password">Password</label>
+              <div class="password-box">
+                <input
+                  type="password"
+                  name="Password"
+                  id="password"
+                  pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+                  placeholder="Type your password"
+                />
+                <div id="eyes_icons_container">
+                  <img
+                    src="images/eye.svg"
+                    alt=""
+                    class="eye-icon"
+                    id="eyeOpened"
+                  />
+                  <img
+                    src="images/eye-closed.svg"
+                    alt=""
+                    class="eye-icon"
+                    id="eyeClosed"
+                  />
+                </div>
+                <img
+                  src="images/lock.svg"
+                  alt=""
+                  class="lock-icon icon-pre"
+                  id="lock-pre"
+                />
+                <img
+                  src="images/lock-focus.svg"
+                  alt=""
+                  class="lock-icon icon-focus"
+                  id="lock-focus"
+                />
+              </div>
+
+              <div class="remind">
+                <input
+                  type="checkbox"
+                  id="remind"
+                  name="Remind"
+                  value="remind"
+                />
+                <label for="remind">Remind me</label>
+                <p>Forgot my password</p>
+              </div>
+
+              <div class="btn">
+                <button type="submit" class="loginbtn login">LOGIN</button>
+              </div>
+              <div class="text">
+                <p>Don't have an account?&nbsp;<strong>Sign up!</strong></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="image" id="image">
+        <img src="images/side-image.jpg" alt="" />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
